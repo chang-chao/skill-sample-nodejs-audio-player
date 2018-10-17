@@ -24,7 +24,7 @@ const LaunchRequestHandler = {
     } else {
       playbackInfo.inPlaybackSession = false;
       message = `前回 ${constants.audioData[playbackInfo.playOrder[playbackInfo.index]].title} を聞きました. 続きますか`;
-      reprompt = '「はい」を言って、前回の続きから再生します、または、「いいえ」を言って、最初から再生します。';
+      reprompt = '「はい」を言って、前回の続きから再生します、または、「いいえ」を言って、最初から再生します。';
     }
 
     return handlerInput.responseBuilder
