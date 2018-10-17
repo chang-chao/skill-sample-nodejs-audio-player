@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "audio player",
+            "invocationName": "オーディオプレイヤー",
             "intents": [{
                     "name": "AMAZON.CancelIntent",
                     "slots": [],
@@ -21,21 +21,7 @@
                     "name": "PlayAudio",
                     "slots": [],
                     "samples": [
-                        "begin podcast",
-                        "begin the podcast",
-                        "begin playing the podcast",
-                        "start podcast",
-                        "start the podcast",
-                        "start playing the podcast",
-                        "play the podcast",
-                        "to play",
-                        "to begin podcast",
-                        "to begin the podcast",
-                        "to begin playing the podcast",
-                        "to start podcast",
-                        "to start the podcast",
-                        "to start playing the podcast",
-                        "to play the podcast"
+                        "再生"
                     ]
                 },
                 {

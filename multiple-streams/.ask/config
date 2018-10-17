@@ -1,7 +1,7 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "",
+      "skill_id": "amzn1.ask.skill.5d7ccf85-0be7-417e-8245-0612ef72720c",
       "was_cloned": false,
       "merge": {
         "manifest": {
@@ -13,6 +13,27 @@
             }
           }
         }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "35273879e6da37f33d4d82da3c829246"
+        },
+        "interactionModel": {
+          "ja-JP": {
+            "eTag": "ea3df8385f048fa563dbef0492d26776"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:075201415624:function:ask-custom-Multi_Stream_Audio_Player",
+            "functionName": "arn:aws:lambda:us-east-1:075201415624:function:ask-custom-Multi_Stream_Audio_Player",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "a9fd832d-49d9-4654-ae43-89bc6f81d9f5"
+          }
+        ]
       }
     },
     "sebuk": {

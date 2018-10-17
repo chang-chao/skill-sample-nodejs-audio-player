@@ -1,30 +1,11 @@
 {
-  "skillManifest": {
+  "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
+        "ja-JP": {
           "summary": "Very basic podcast sample",
           "examplePhrases": [
-            "Alexa, open audio player",
-            "Alexa, ask audio player to begin podcast",
-            "Alexa, ask audio player to stop"
-          ],
-          "keywords": [
-            "podcast",
-            "streaming",
-            "example"
-          ],
-          "name": "Multi Stream Audio Player",
-          "description": "",
-          "smallIconUri": "https://alexademo.ninja/skills/logo-108.png",
-          "largeIconUri": "https://alexademo.ninja/skills/logo-512.png"
-        },
-        "en-GB": {
-          "summary": "Very basic podcast sample",
-          "examplePhrases": [
-            "Alexa, open audio player",
-            "Alexa, ask audio player to begin podcast",
-            "Alexa, ask audio player to stop"
+            "Alexa, オーディオプレイヤーを起動して"
           ],
           "keywords": [
             "podcast",

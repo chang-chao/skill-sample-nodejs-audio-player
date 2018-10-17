@@ -19,12 +19,12 @@ const LaunchRequestHandler = {
     let reprompt;
 
     if (!playbackInfo.hasPreviousPlaybackSession) {
-      message = 'Welcome to the AWS Podcast. you can ask to play the audio to begin the podcast.';
-      reprompt = 'You can say, play the audio, to begin.';
+      message = 'オーディオ再生サンプルへようこそ. 再生を言って、オーディオを再生します.';
+      reprompt = '「再生」を言って、オーディオを再生します';
     } else {
       playbackInfo.inPlaybackSession = false;
-      message = `You were listening to ${constants.audioData[playbackInfo.playOrder[playbackInfo.index]].title}. Would you like to resume?`;
-      reprompt = 'You can say yes to resume or no to play from the top.';
+      message = `前回 ${constants.audioData[playbackInfo.playOrder[playbackInfo.index]].title} を聞きました. 続きますか`;
+      reprompt = '「はい」を言って、前回の続きから再生します、または、「いいえ」を言って、最初から再生します。';
     }
 
     return handlerInput.responseBuilder
@@ -115,7 +115,7 @@ const CheckAudioInterfaceHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak('Sorry, this skill is not supported on this device')
+      .speak('すみません、このディバイスはサポートしません。')
       .withShouldEndSession(true)
       .getResponse();
   },
@@ -202,7 +202,7 @@ const LoopOnHandler = {
     playbackSetting.loop = true;
 
     return handlerInput.responseBuilder
-      .speak('Loop turned on.')
+      .speak('ループがONにしました。')
       .getResponse();
   },
 };
@@ -222,7 +222,7 @@ const LoopOffHandler = {
     playbackSetting.loop = false;
 
     return handlerInput.responseBuilder
-      .speak('Loop turned off.')
+      .speak('ループがOFFにしました。')
       .getResponse();
   },
 };
@@ -335,11 +335,11 @@ const HelpHandler = {
     let message;
 
     if (!playbackInfo.hasPreviousPlaybackSession) {
-      message = 'Welcome to the AWS Podcast. You can say, play the audio to begin the podcast.';
+      message = 'オーディオ再生サンプルへようこそ. 再生を言って、オーディオを再生します。';
     } else if (!playbackInfo.inPlaybackSession) {
-      message = `You were listening to ${constants.audioData[playbackInfo.index].title}. Would you like to resume?`;
+      message = ` ${constants.audioData[playbackInfo.index].title} を聞いていました、続きますか。`;
     } else {
-      message = 'You are listening to the AWS Podcast. You can say, Next or Previous to navigate through the playlist. At any time, you can say Pause to pause the audio and Resume to resume.';
+      message = 'オーディオ再生サンプルへようこそ. 再生を言って、オーディオを再生します。';
     }
 
     return handlerInput.responseBuilder
@@ -362,7 +362,7 @@ const ExitHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak('Goodbye!')
+      .speak('さようなら!')
       .getResponse();
   },
 };
@@ -392,7 +392,7 @@ const ErrorHandler = {
   },
   handle(handlerInput, error) {
     console.log(`Error handled: ${error.message}`);
-    const message = 'Sorry, this is not a valid command. Please say help to hear what you can say.';
+    const message = 'よくわかりませんでした';
 
     return handlerInput.responseBuilder
       .speak(message)
@@ -476,7 +476,7 @@ const controller = {
     playbackInfo.nextStreamEnqueued = false;
 
     responseBuilder
-      .speak(`This is ${podcast.title}`)
+      .speak(`${podcast.title} を再生します。`)
       .withShouldEndSession(true)
       .addAudioPlayerPlayDirective(playBehavior, podcast.url, token, offsetInMilliseconds, null);
 
@@ -503,7 +503,7 @@ const controller = {
 
     if (nextIndex === 0 && !playbackSetting.loop) {
       return handlerInput.responseBuilder
-        .speak('You have reached the end of the playlist')
+        .speak('現在は最終のオーディオです。')
         .addAudioPlayerStopDirective()
         .getResponse();
     }
@@ -527,7 +527,7 @@ const controller = {
         previousIndex += constants.audioData.length;
       } else {
         return handlerInput.responseBuilder
-          .speak('You have reached the start of the playlist')
+          .speak('現在は最初のオーディオです')
           .addAudioPlayerStopDirective()
           .getResponse();
       }

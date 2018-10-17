@@ -59,7 +59,7 @@ After deploying, you will need to add DynamoDB permission to the IAM Role create
 
 - connect to AWS Console : https://console.aws.amazon.com/iam/home?region=us-east-1#/roles
 - select the role created to execute your lambda function (it is named "ask-lambda-Multi-Stream-Audio-Player" if you did not  change the default name)
-- click "Attach Policy"
+- click "Attach Policies"
 - locate and select "DynamoDBFullAccessPolicy" role and click "Attach Policy"
 
 #### Change the skill id in lambda code. (Optional but recommended)

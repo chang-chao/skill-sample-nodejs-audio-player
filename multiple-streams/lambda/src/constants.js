@@ -7,11 +7,12 @@ exports.skill = {
 
 exports.audioData = [
   {
-    title: 'Episode 139',
-    url: 'https://feeds.soundcloud.com/stream/274166909-amazon-web-services-306355661-aws-podcast-episode-139.mp3',
+    title: 'ギター曲',
+    url: 'https://freemusicarchive.org/file/music/WFMU/Gillicuddy/Plays_Guitar/Gillicuddy_-_05_-_Springish.mp3',
   },
   {
-    title: 'Episode 140',
-    url: 'https://feeds.soundcloud.com/stream/275202399-amazon-web-services-306355661-amazon-web-services.mp3',
+    title: 'ピアノ曲',
+    url: 'https://www.mfiles.co.uk/mp3-downloads/chopin-nocturne-op9-no2.mp3',
   },
 ];
+
