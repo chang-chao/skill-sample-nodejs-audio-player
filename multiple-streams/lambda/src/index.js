@@ -63,6 +63,7 @@ const AudioPlayerEventHandler = {
         playbackInfo.nextStreamEnqueued = false;
         playbackInfo.offsetInMilliseconds = 0;
         playbackInfo.index = 0;
+        playbackInfo.token = '0';
         break;
       case 'PlaybackStopped':
         playbackInfo.token = getToken(handlerInput);
