@@ -30,8 +30,7 @@
             "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"
-            ],
-            "revisionId": "378dccde-53eb-410c-a15c-fe5b19207d40"
+            ]
           }
         ]
       }
